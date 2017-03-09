@@ -1,0 +1,145 @@
+Key:
++ means added
+- means taken out
+~ means modified
+# means fixed
+% means working on
+
+STORY IS ON HOLD AND MAY OR MAY NOT BE CONTINUED! I AM LACKING IN IDEAS FOR STORY SO, YEA.
+
+!!!!ANY SUGGESTIONS FOR ADDITIONS ARE WELCOME!!!!
+
+!!!!PLEASE EMAIL ME ABOUT BUGS at wgrech.sp@mysummitps.org !!!!
+
+
+IDEA LIST:
+------------
+Teleportation blocks
+Trampoline blocks
+Falling Platforms
+
+
+-=*VERSION 0.1*=-
++ 4 new levels
+~ level order
++ wall jump power ups
++ lava
++ goals
++ basic game functionality
+
+-=*VERSION 0.1.1*=-
++ WASD controls
+
+-=*VERSION 0.1.2*=-
++ Jump Sounds
+# Infinite wall jump glitch
+# WASD Controls
+
+-=*VERSION 0.1.3*=-
++ Beginning of story
+~ Level 3 layout
+% New Levels
+
+-=*VERSION 0.1.4*=-
++ More story
+~ Level 4 layout
+% New Levels
+% Story
+
+-=*VERSION 0.1.5*=-
+# Should fix phasing glitch
+% Levels
+% Stories
+
+-=*VERSION 0.1.6*=-
++ LEVEL 6 COMPLETE!
+% More Levels!
+% Story
+
+-=*VERSION 0.1.7*=-
+~ Layout of screen
+~ Some story text
+% Story
+% Levels
+
+-=*VERSION 0.1.8*=-
++ Character sprites
+% Story
+% Levels
+
+-=*VERSION 0.1.8.1*=-
+- Character Sprites
+% Story
+% Levels
+
+-=*VERSION 0.1.9*=-
+~ Level 6 Design
++ Level 7
+% Levels
+% Story
+
+-=*VERSION 0.2.0*=-
++ Level 8
++ Checkpoint system
+% More Levels
+
+-=*VERSION 0.2.1*=-
++ Music!
+% More levels
+
+-=*VERSION 0.2.2*=-
++ Ability to mute all sounds
+% More Levels
+
+-=*VERSION 0.2.3*=-
+# Level 8 Layout to force fall
+% More levels
+
+-=*VERSION 0.3.0*=-
++ Added sound warning
++ Level 9
++ NEW GAME MECHANIC!!!!! Buttons are now appearing on level 9 and above
++ Improved checkpoint system, if you die, you will now restart on the same level as you died on
+
+-=*VERSION 0.3.1*=-
++ Ghosts!!!!!!!!!!!!!!!!
+
+-=*VERSION 0.3.2*=-
++ level 10
+
+-=*VERSION 0.3.3*=-
++ New look! Looks better and easier on the eyes
+
+-=*VERSION 0.3.4*=-
++ Added ghost clearer so you can see the level if you die too much
++ Death Counter
++ Level 11
+
+-=*VERSION 0.3.5*=-
+# Fixed some spawning and level glitches
+
+-=*VERSION 0.3.6*=-
+# Fixed the level transitions
++ Death noise
++ New Music made by me
+% More levels
+
+-=*VERSION 0.3.7*=-
+~ Music is now less chipper and harsh
++ Level indicator
++ Level 12
++ Level 13
++ Level 14
++ Level 15
+~ Jump sound so it is quieter
+
+-=*VERSION 0.3.8*=-
++ Level 16
+
+-=*VERSION 0.3.9*=-
++ Level 17
++ Level 18
+
+-=*VERSION 0.4.0*=-
++Save system
++
