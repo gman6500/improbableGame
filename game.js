@@ -1,6 +1,7 @@
 var DEBUG=false;
 
 
+
 (function () {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
@@ -64,7 +65,7 @@ var startPoint=[
     {x:1075,y:510,needsSpawn:true},//level 15
     {x:150,y:150,needSpawn:true},//level 16
     {x:1050,y:550,needSpawn:true},//Level 17
-    {x:550,y:550,needSpawn:true}
+    {x:250,y:30,needSpawn:true}
     ];
 var ghosts=[];
 
@@ -423,6 +424,21 @@ boxes.push({level:17,x:950,y:100,width:75,height:15})
 boxes.push({level:17,x:800,y:0,width:15,height:500})
 //Level 18
 
+boxes.push({level:18,x:200,y:70,width:100,height:15});
+boxes.push({level:18,x:360,y:10,width:15,height:100});
+boxes.push({level:18,x:300,y:70,width:15,height:550});
+boxes.push({level:18,x:450,y:70,width:15,height:550});
+boxes.push({level:18,x:600,y:0,width:15,height:520});
+boxes.push({level:18,x:750,y:350,width:15,height:50});
+boxes.push({level:18,x:690,y:160,width:15,height:50});
+boxes.push({level:18,x:900,y:250,width:15,height:150});
+boxes.push({level:18,x:900,y:250,width:250,height:15});
+
+
+
+
+
+
 //goal
 //level 1
 goal.push({
@@ -513,6 +529,7 @@ goal.push({x:1080,y:550,width:10,height:10,level:16})
 //Level 17
 goal.push({x:500,y:550,width:10,height:10,level:17})
 //Level 18
+goal.push({x:1050,y:200,width:10,height:10,level:18})
 
 //Jump Power
 //level 3
@@ -612,6 +629,16 @@ jumpPow.push({x:1030,y:390,width:10,height:10,level:17})
 jumpPow.push({x:1030,y:290,width:10,height:10,level:17})
 jumpPow.push({x:1030,y:190,width:10,height:10,level:17})
 //Level 18
+jumpPow.push({x:370,y:130,width:10,height:10,level:18})
+jumpPow.push({x:670,y:400,width:10,height:10,level:18})
+jumpPow.push({x:650,y:270,width:10,height:10,level:18})
+jumpPow.push({x:650,y:200,width:10,height:10,level:18})
+jumpPow.push({x:650,y:100,width:10,height:10,level:18})
+
+
+
+
+
 
 //lava
 //level 3
@@ -850,7 +877,7 @@ lava.push({
     width: 15,
     height: 589,
     level:9,
-    tag:"alpha"
+    tag:"blue"
 });
 //level 10
 lava.push({x:144,y:590,width:909,height:4,level:10})
@@ -966,6 +993,15 @@ lava.push({level:17,x:800,y:340,width:60,height:15})
 lava.push({level:17,x:800,y:310,width:40,height:15})
 lava.push({level:17,x:800,y:280,width:20,height:15})
 //Level 18
+lava.push({level:18,x:200,y:0,width:15,height:85})
+lava.push({level:18,x:315,y:575,width:135,height:15})
+lava.push({level:18,x:510,y:100,width:40,height:15})
+lava.push({level:18,x:465,y:200,width:40,height:15})
+lava.push({level:18,x:560,y:200,width:40,height:15})
+lava.push({level:18,x:510,y:325,width:40,height:15})
+lava.push({level:18,x:465,y:425,width:40,height:15})
+lava.push({level:18,x:560,y:425,width:40,height:15})
+
 
 //Buttons
 //Level 9
@@ -975,7 +1011,7 @@ button.push({
     width:15,
     height:15,
     level:9,
-    tag:"alpha",
+    tag:"blue",
     command:"destroy",
     amount:null
 });
@@ -1074,13 +1110,19 @@ function update() {
     for(var i=0;i<currentLevelLava.length; i++){
         if(currentLevelLava[i].level===player.level){
             ctx.rect(currentLevelLava[i].x, currentLevelLava[i].y, currentLevelLava[i].width, currentLevelLava[i].height);
+            if(currentLevelLava[i].tag!=="holder"){
+                ctx.strokeStyle=currentLevelLava.tag;
+                ctx.strokeRect(currentLevelLava[i].x, currentLevelLava[i].y, currentLevelLava[i].width, currentLevelLava[i].height)
+            }
             var dir=colCheck(player,currentLevelLava[i]);
             if(dir==="l"||dir==="r"||dir==="b"||dir==="t"){
                 reset();
                 typeStory(player.level);
             }
         }
+        
     }
+    ctx.strokeStyle="#000000"
     ctx.fill();
     ctx.beginPath();
     ctx.fillStyle="green";
@@ -1110,15 +1152,21 @@ function update() {
     }
     ctx.fill();
     ctx.beginPath();
-    ctx.fillStyle="orange";
+    
 //     console.log("about to render buttons")
     for(var i=0; i<currentLevelButton.length;i++){
 //         console.log(i)
 //         console.log(currentLevelButton[i])
 //         console.log("drawing button")
         if(currentLevelButton[i].level===player.level){
+            
+            ctx.fillStyle="orange";
             ctx.rect(currentLevelButton[i].x,currentLevelButton[i].y,currentLevelButton[i].width,currentLevelButton[i].height);
+            ctx.strokeStyle=currentLevelButton[i].tag;
+            ctx.lineWidth=5;
+            ctx.strokeRect(currentLevelButton[i].x,currentLevelButton[i].y,currentLevelButton[i].width,currentLevelButton[i].height)
 //             console.log(currentLevelButton[i])
+//             ctx.fillStyle="orange"
             var dir=colCheck(player,currentLevelButton[i]);
             if(dir==="l"||dir==="r"||dir==="b"||dir==="t"){
                 console.log("button hit");
@@ -1127,6 +1175,8 @@ function update() {
             }
         }
     }
+    
+    
 //     console.log("done rendering buttons")
     ctx.fill()
     if(player.grounded){

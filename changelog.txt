@@ -142,4 +142,10 @@ Falling Platforms
 
 -=*VERSION 0.4.0*=-
 +Save system
-+
+
+-=*VERSION 0.4.1*=-
++Some random button fixes and tweaks
+
+-=*VERSION 0.4.2*=-
++Added level 18
+! Small note, I will finish developing levels at level 20. Any user levels that are good enough can still make it into the game.
