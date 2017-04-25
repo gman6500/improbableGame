@@ -1117,7 +1117,7 @@ function update() {
             var dir=colCheck(player,currentLevelLava[i]);
             if(dir==="l"||dir==="r"||dir==="b"||dir==="t"){
                 reset();
-                typeStory(player.level);
+//                 typeStory(player.level);
             }
         }
         
@@ -1133,7 +1133,7 @@ function update() {
             if(dir==="l"||dir==="r"||dir==="b"||dir==="t"){
                 player.level++;
                 loadLevel(player.level)
-                typeStory(player.level)
+//                 typeStory(player.level)
             }
         }
     }
@@ -1486,7 +1486,7 @@ window.addEventListener("load", function () {
     
     update();
     loadLevel(player.level);
-    typeStory(player.level);
+//     typeStory(player.level);
 });
 
 //the power up updater
